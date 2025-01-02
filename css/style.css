@@ -14,19 +14,57 @@ header {
   text-align: center;
 }
 
+/* styles.css */
+
+nav {
+  background: #333;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  position: relative; /* Nécessaire pour le positionnement du dropdown */
+  display: inline-block; /* Affiche les éléments en ligne */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 15px 20px;
+  display: block; /* Permet de cliquer sur toute la zone */
+}
+
+nav ul li:hover > a {
+  background: #444; /* Change le fond au survol */
+}
+
+.dropdown {
+  display: none; /* Masque le menu déroulant par défaut */
+  position: absolute; /* Positionne le dropdown par rapport à son parent */
+  top: 100%; /* Positionne le dropdown juste en dessous du parent */
+  left: 0;
+  background: #333; /* Fond du dropdown */
+  z-index: 1000; /* Assure que le dropdown est au-dessus des autres éléments */
+}
+
+nav ul li:hover .dropdown {
+  display: block; /* Affiche le dropdown au survol */
+}
+
+.dropdown li {
+  display: block; /* Affiche les éléments du dropdown en bloc */
+}
+
+.dropdown li a {
+  padding: 10px 20px; /* Ajuste le padding pour les éléments du dropdown */
+}
+
+.dropdown li a:hover {
+  background: #444; /* Change le fond au survol des éléments du dropdown */
 }
 
 section {
