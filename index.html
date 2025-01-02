@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html class="pf" lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -156,4 +156,132 @@
     L'objet de ce projet a été de réaliser une simulation du jeu de la vie de Conway en Java, en utilisant la bibliothèque Swing pour l'interface graphique. On a utilisé un tableau de cellules pour représenter l'état du jeu à un instant donné, et on a implémenté les règles du jeu pour déterminer l'état des cellules à l'instant suivant. 
     </br>
     On a également ajouté des fonctionnalités pour permettre à l'utilisateur de démarrer, arrêter et réinitialiser la simulation, de mofdifier la vitesse de la simulation, de sauvegarder l'état actuel de la simulation sous forme de fichier XML ou d'en charger un, ainsi que la possibilité de modifier les règles du jeu, en choisissant le nombre de voisins pour chaque cellule.
-</p>  -->
+</p>  --> 
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Étudiante en Informatique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+            <li><a href="#competences" class="nav-link">Compétences</a></li>
+            <li><a href="#projets" class="nav-link">Projets</a></li>
+            <li><a href="#formation" class="nav-link">Formation</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil" class="hero section active">
+        <img src="/api/placeholder/200/200" alt="Photo de profil">
+        <h1>Marie Dubois</h1>
+        <p>Étudiante en Master Informatique</p>
+        <p>Passionnée par le développement web et l'intelligence artificielle</p>
+    </section>
+
+    <section id="competences" class="section">
+        <div class="container">
+            <h1>Compétences</h1>
+            <div class="competences-grid">
+                <div class="competence-card">
+                    <h3>Langages de programmation</h3>
+                    <p>Python, Java, JavaScript, C++</p>
+                </div>
+                <div class="competence-card">
+                    <h3>Développement Web</h3>
+                    <p>HTML, CSS, React, Node.js</p>
+                </div>
+                <div class="competence-card">
+                    <h3>Base de données</h3>
+                    <p>MySQL, MongoDB, PostgreSQL</p>
+                </div>
+                <div class="competence-card">
+                    <h3>Outils</h3>
+                    <p>Git, Docker, VS Code, Linux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="section">
+        <div class="container">
+            <h1>Projets</h1>
+            <div class="projets-grid">
+                <div class="projet-card">
+                    <img src="/api/placeholder/300/200" alt="Projet 1">
+                    <div class="projet-info">
+                        <h3>Application de reconnaissance d'images</h3>
+                        <p>Projet académique utilisant TensorFlow pour la classification d'images</p>
+                    </div>
+                </div>
+                <div class="projet-card">
+                    <img src="/api/placeholder/300/200" alt="Projet 2">
+                    <div class="projet-info">
+                        <h3>Site web e-commerce</h3>
+                        <p>Développement d'une boutique en ligne avec React et Node.js</p>
+                    </div>
+                </div>
+                <div class="projet-card">
+                    <img src="/api/placeholder/300/200" alt="Projet 3">
+                    <div class="projet-info">
+                        <h3>Application mobile de fitness</h3>
+                        <p>Application React Native pour suivre ses activités sportives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="section">
+        <div class="container">
+            <h1>Formation</h1>
+            <div class="formation-timeline">
+                <div class="formation-item">
+                    <h3>Master en Informatique</h3>
+                    <p>Université de Paris - 2023-2025</p>
+                    <p>Spécialisation en Intelligence Artificielle et Science des Données</p>
+                </div>
+                <div class="formation-item">
+                    <h3>Licence en Informatique</h3>
+                    <p>Université de Lyon - 2020-2023</p>
+                    <p>Mention Très Bien</p>
+                </div>
+                <div class="formation-item">
+                    <h3>Baccalauréat Scientifique</h3>
+                    <p>Lycée International - 2020</p>
+                    <p>Mention Bien - Spécialité Mathématiques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h1>Contact</h1>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
