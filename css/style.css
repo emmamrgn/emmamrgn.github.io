@@ -1,10 +1,8 @@
-/* styles.css */
-
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
 }
 
 header {
@@ -14,69 +12,29 @@ header {
   text-align: center;
 }
 
-/* styles.css */
-
-nav {
-  background: #333;
-}
-
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 nav ul li {
-  position: relative; /* Nécessaire pour le positionnement du dropdown */
-  display: inline-block; /* Affiche les éléments en ligne */
+  display: inline;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 15px 20px;
-  display: block; /* Permet de cliquer sur toute la zone */
-}
-
-nav ul li:hover > a {
-  background: #444; /* Change le fond au survol */
-}
-
-.dropdown {
-  display: none; /* Masque le menu déroulant par défaut */
-  position: absolute; /* Positionne le dropdown par rapport à son parent */
-  top: 100%; /* Positionne le dropdown juste en dessous du parent */
-  left: 0;
-  background: #333; /* Fond du dropdown */
-  z-index: 1000; /* Assure que le dropdown est au-dessus des autres éléments */
-}
-
-nav ul li:hover .dropdown {
-  display: block; /* Affiche le dropdown au survol */
-}
-
-.dropdown li {
-  display: block; /* Affiche les éléments du dropdown en bloc */
-}
-
-.dropdown li a {
-  padding: 10px 20px; /* Ajuste le padding pour les éléments du dropdown */
-}
-
-.dropdown li a:hover {
-  background: #444; /* Change le fond au survol des éléments du dropdown */
 }
 
 section {
   padding: 20px;
   margin: 20px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
 }
 
-h1, h2, h3 {
-  color: #333;
+.projet {
+  margin-bottom: 20px;
 }
 
 footer {
@@ -87,55 +45,4 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-}
-
-article {
-  margin-bottom: 20px;
-}
-
-article h3 {
-  margin: 0;
-}
-
-article p {
-  margin: 5px 0;
-}
-
-a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Styles pour le popup (si nécessaire) */
-.projet_popup {
-  display: none; /* Masqué par défaut */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.content_popup {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  width: 80%;
-  max-width: 600px;
-}
-
-.btn_close_popup {
-  cursor: pointer;
-  text-align: right;
-}
-
-.infos_popup {
-  margin-top: 20px;
 }
