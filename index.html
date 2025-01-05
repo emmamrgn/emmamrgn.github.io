@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma (Jiaxi) - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>Emma Morgenstern - Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl font-bold mb-4">Hey, je suis Emma (Jiaxi) 👋</h1>
-            <p class="text-xl">Étudiante en Licence Informatique à l'Université Lyon 1</p>
+<body>
+   <!-- Hero Section -->
+   <header class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Emma Morgenstern</h1>
+            <p>Étudiante en Licence Informatique à l'Université Lyon 1</p>
         </div>
-    </header>
+        <div class="hero-image">
+            <!-- Remplacez le src par le chemin vers votre photo -->
+            <img src="img/photo.jpg" alt="photo de emma" class="profile-image">
+        </div>
+    </div>
+</header>
 
     <!-- About Section -->
-    <section class="container mx-auto px-6 py-12">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <h2 class="text-3xl font-bold mb-6">À propos de moi</h2>
-            <p class="text-gray-700 text-lg">
+    <section class="container section">
+        <div class="card">
+            <h2>À propos de moi</h2>
+            <p>
                 Je suis passionnée par l'informatique et la programmation. Mon parcours universitaire m'a permis de développer
                 des compétences variées et de travailler sur des projets passionnants.
             </p>
@@ -28,52 +34,52 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-8">Compétences</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-2xl font-bold mb-4">Langages</h3>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-python text-4xl text-blue-500"></i>
-                        <span class="mt-2">Python</span>
+    <section class="container section">
+        <h2>Compétences</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <h3>Langages</h3>
+                <div class="skills-items">
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-java text-4xl text-red-500"></i>
-                        <span class="mt-2">Java</span>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-html5 text-4xl text-orange-500"></i>
-                        <span class="mt-2">HTML/CSS</span>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML/CSS</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fas fa-code text-4xl text-purple-500"></i>
-                        <span class="mt-2">C/C++</span>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <span>C/C++</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-php text-4xl text-indigo-500"></i>
-                        <span class="mt-2">PHP</span>
+                    <div class="skill-item">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
                     </div>
                 </div>
             </div>
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-2xl font-bold mb-4">Outils</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-git-alt text-4xl text-orange-600"></i>
-                        <span class="mt-2">Git</span>
+            <div class="card">
+                <h3>Outils</h3>
+                <div class="tools-items">
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-discord text-4xl text-indigo-600"></i>
-                        <span class="mt-2">Discord Bots</span>
+                    <div class="skill-item">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord Bots</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fas fa-code-branch text-4xl text-green-600"></i>
-                        <span class="mt-2">VSCode</span>
+                    <div class="skill-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span>VSCode</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                        <i class="fab fa-java text-4xl text-blue-600"></i>
-                        <span class="mt-2">IntelliJ IDEA</span>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <span>IntelliJ IDEA</span>
                     </div>
                 </div>
             </div>
@@ -81,24 +87,24 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-8">Projets</h2>
+    <section class="container section">
+        <h2>Projets</h2>
         
         <!-- Academic Projects -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold mb-6">Projets Universitaires</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h4 class="text-xl font-bold mb-2">Jeu de la Vie</h4>
-                    <p class="text-gray-600 mb-4">Application Interactive du Jeu de la Vie - Projet L3</p>
-                    <a href="https://github.com/emmamrgn/JeuDeLaVie" class="text-purple-600 hover:text-purple-800">
+        <div class="projects-category">
+            <h3>Projets Universitaires</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>Jeu de la Vie</h4>
+                    <p>Application Interactive du Jeu de la Vie - Projet L3</p>
+                    <a href="https://github.com/emmamrgn/JeuDeLaVie">
                         <i class="fab fa-github"></i> Voir sur GitHub
                     </a>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h4 class="text-xl font-bold mb-2">Lif-Fighter</h4>
-                    <p class="text-gray-600 mb-4">Jeu style Street Fighter avec les personnages de Persona4 - Projet L2</p>
-                    <a href="https://github.com/emmamrgn/lif-fighter" class="text-purple-600 hover:text-purple-800">
+                <div class="project-card">
+                    <h4>Lif-Fighter</h4>
+                    <p>Jeu style Street Fighter avec les personnages de Persona4 - Projet L2</p>
+                    <a href="https://github.com/emmamrgn/lif-fighter">
                         <i class="fab fa-github"></i> Voir sur GitHub
                     </a>
                 </div>
@@ -106,20 +112,20 @@
         </div>
 
         <!-- Personal Projects -->
-        <div>
-            <h3 class="text-2xl font-bold mb-6">Projets Personnels</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h4 class="text-xl font-bold mb-2">Valorant Discord Bot</h4>
-                    <p class="text-gray-600 mb-4">Bot Discord qui renvoie le rank Valorant du joueur</p>
-                    <a href="https://github.com/emmamrgn/valorant-discord-bot" class="text-purple-600 hover:text-purple-800">
+        <div class="projects-category">
+            <h3>Projets Personnels</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>Valorant Discord Bot</h4>
+                    <p>Bot Discord qui renvoie le rank Valorant du joueur</p>
+                    <a href="https://github.com/emmamrgn/valorant-discord-bot">
                         <i class="fab fa-github"></i> Voir sur GitHub
                     </a>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h4 class="text-xl font-bold mb-2">Role Manager App</h4>
-                    <p class="text-gray-600 mb-4">Application Discord pour gérer les rôles des membres</p>
-                    <a href="https://github.com/emmamrgn/manager-role-app" class="text-purple-600 hover:text-purple-800">
+                <div class="project-card">
+                    <h4>Role Manager App</h4>
+                    <p>Application Discord pour gérer les rôles des membres</p>
+                    <a href="https://github.com/emmamrgn/manager-role-app">
                         <i class="fab fa-github"></i> Voir sur GitHub
                     </a>
                 </div>
@@ -128,12 +134,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
+    <footer>
+        <div class="container">
             <p>⭐️ Créé par Emma (Jiaxi)</p>
-            <div class="mt-4">
-                <a href="https://github.com/emmamrgn" class="text-gray-400 hover:text-white mx-2">
-                    <i class="fab fa-github text-2xl"></i>
+            <div class="social-links">
+                <a href="https://github.com/emmamrgn">
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
         </div>
