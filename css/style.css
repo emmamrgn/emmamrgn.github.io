@@ -55,8 +55,8 @@ body {
 }
 
 .profile-image {
-  width: 310px;  /* Ajusté pour maintenir le ratio 388:508 */
-  height: 406px; /* Ajusté pour maintenir le ratio 388:508 */
+  width: 244px;  /* Ajusté pour maintenir le ratio 388:508 */
+  height: 254px; /* Ajusté pour maintenir le ratio 388:508 */
   border-radius: 20px; /* Changé pour un rectangle arrondi */
   border: 4px solid white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
