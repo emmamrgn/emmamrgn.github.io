@@ -158,8 +158,8 @@ h3 {
 }
 
 .skill-item img {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  width : 150px;
+  height : 150px;
 }
 
 /* Projets */
