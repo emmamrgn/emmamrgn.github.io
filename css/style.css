@@ -1,17 +1,18 @@
 /* Variables */
 :root {
-  --primary-color: #6366f1;
-  --secondary-color: #818cf8;
-  --text-color: #1f2937;
-  --bg-color: #ffffff;
-  --card-bg: #f8fafc;
-  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --primary-color: #2dd4bf;
+  --secondary-color: #0d9488;
+  --bg-color: #e2e8f0;
+  --text-color: #334155;
+  --shadow-color: #c7d2dd;
+  --light-shadow: #ffffff;
+  --card-bg: #e2e8f0;
+  --hover-color: #14b8a6;
 }
 
 /* Base styles */
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.7;
@@ -19,142 +20,179 @@ body {
 
 /* Navigation */
 .nav-menu {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--bg-color);
+  border: none;
+  box-shadow: 
+    5px 5px 10px var(--shadow-color),
+    -5px -5px 10px var(--light-shadow);
+}
+
+.nav-content {
+  padding: 1rem 2rem;
+}
+
+.nav-logo {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .nav-links a {
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  margin: 0 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-links a.active {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.nav-links a:hover, .nav-links a.active {
+  background: linear-gradient(145deg, var(--shadow-color), var(--light-shadow));
+  box-shadow: 
+    4px 4px 8px var(--shadow-color),
+    -4px -4px 8px var(--light-shadow);
+  color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero {
-  background: none;
-  color: var(--text-color);
-  min-height: calc(100vh - 4rem);
+  background: var(--bg-color);
+  padding: 4rem 0;
+}
+
+.hero-content {
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 
+    8px 8px 16px var(--shadow-color),
+    -8px -8px 16px var(--light-shadow);
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-size: 3rem;
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
 
 .profile-image {
-  border: none;
+  border-radius: 20px;
   box-shadow: 
-    20px 20px 60px rgba(0, 0, 0, 0.1),
-    -20px -20px 60px rgba(255, 255, 255, 0.5);
+    12px 12px 24px var(--shadow-color),
+    -12px -12px 24px var(--light-shadow);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: translateY(-5px);
 }
 
 /* Cards */
 .card {
+  border-radius: 15px;
   background: var(--card-bg);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--light-shadow);
+  border: none;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
 }
 
 /* Skills */
 .skill-item {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 
+    inset 4px 4px 8px var(--shadow-color),
+    inset -4px -4px 8px var(--light-shadow);
   transition: all 0.3s ease;
 }
 
 .skill-item:hover {
-  background: var(--gradient);
-  color: white;
+  box-shadow: 
+    6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--light-shadow);
+  transform: translateY(-3px);
+}
+
+.skill-item i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .skill-item:hover i {
-  color: white !important;
+  color: var(--primary-color);
 }
 
 /* Projects */
 .project-card {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: 15px;
+  background: var(--card-bg);
+  box-shadow: 
+    8px 8px 16px var(--shadow-color),
+    -8px -8px 16px var(--light-shadow);
   transition: all 0.3s ease;
+  border: none;
 }
 
 .project-card:hover {
-  background: var(--gradient);
-  color: white;
+  transform: translateY(-5px);
 }
 
-.project-card:hover p,
-.project-card:hover a,
-.project-card:hover i {
-  color: white !important;
+.project-card h4 {
+  color: var(--primary-color);
+}
+
+.project-card a {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.project-card a:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 
+    4px 4px 8px var(--shadow-color),
+    -4px -4px 8px var(--light-shadow);
 }
 
 /* Footer */
 footer {
-  background: var(--card-bg);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--bg-color);
+  box-shadow: 
+    inset 0 4px 8px var(--shadow-color);
 }
 
 .social-links a {
-  transition: transform 0.3s ease;
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 
+    4px 4px 8px var(--shadow-color),
+    -4px -4px 8px var(--light-shadow);
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
 }
 
 .social-links a:hover {
-  transform: scale(1.2);
+  transform: translateY(-3px);
+  box-shadow: 
+    6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--light-shadow);
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
-.hero-content,
-.card,
-.project-card {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-/* Prefix mixins for better browser compatibility */
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
-  to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+.hero-image {
+  animation: float 6s ease-in-out infinite;
 }
