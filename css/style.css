@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-  --primary-color: #9333ea;
-  --secondary-color: #4f46e5;
+  --primary-color: #2a7dd6;
+  --secondary-color: #9ce1f8;
   --text-color: #374151;
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
@@ -157,11 +157,6 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-.skill-item img {
-  height: 2rem;
-  width: 2rem;
-  font-size: 2rem;
-}
 
 /* Projets */
 .projects-category {
@@ -209,6 +204,7 @@ h3 {
 .project-card a:hover {
   color: var(--secondary-color);
 }
+
 
 /* Footer */
 footer {
