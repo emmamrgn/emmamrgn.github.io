@@ -238,7 +238,7 @@ footer {
 }
 
 .social-links a:hover {
-  color: white;
+  color: rgb(81, 154, 249);
 }
 
 
@@ -267,17 +267,19 @@ footer {
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
-    align-items: center;
+    align-items: right;
 }
 
 .skill-item img {
     height: 50%;
     width: auto;
+    align-items: right;
 }
 
 .project-card img {
     width: 50%;
     height: auto;
+    align-items: right;
 
 }
 
