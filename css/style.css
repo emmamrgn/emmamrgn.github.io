@@ -372,7 +372,7 @@ body {
 }
 
 #icon {
-  margin-left: auto; /* Pousse les icônes à droite */
-    display: flex; /* Utilise flexbox pour les icônes */
-    gap: 10px; /* Espace entre les icônes */
+  margin-right: auto; /* Pousse les icônes à droite */
+  display: flex; /* Utilise flexbox pour les icônes */
+  gap: 10px; /* Espace entre les icônes */
 }
