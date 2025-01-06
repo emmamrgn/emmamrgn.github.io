@@ -275,6 +275,12 @@ footer {
     width: auto;
 }
 
+.project-card img {
+    width: 50%;
+    height: auto;
+
+}
+
 
 /* Navigation */
 .nav-menu {
