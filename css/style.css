@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-  --primary-color: #2a7dd6;
-  --secondary-color: #9ce1f8;
+  --primary-color: #4c82bc;
+  --secondary-color: #79afc1;
   --text-color: #374151;
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', Roboto, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;

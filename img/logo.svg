@@ -3,7 +3,7 @@
     <!-- <circle cx="100" cy="100" r="95" fill="#9ce1f8"/> -->
     
     <!-- Bordure du logo -->
-    <circle cx="100" cy="100" r="85" fill="#3391f5" stroke="white" stroke-width="5"/>
+    <circle cx="100" cy="100" r="85" fill="#2a7dd6" stroke="white" stroke-width="5"/>
     
     <!-- Étoiles décoratives blanches -->
     <path d="M40 60 L42 65 L47 67 L42 69 L40 74 L38 69 L33 67 L38 65 Z" fill="white"/>
