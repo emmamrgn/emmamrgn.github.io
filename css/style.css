@@ -241,38 +241,7 @@ footer {
   color: white;
 }
 
-/* Icons colors */
-.fa-python {
-  color: #3776ab;
-}
 
-.fa-java {
-  color: #007396;
-}
-
-.fa-html5 {
-  color: #e34f26;
-}
-
-.fa-code {
-  color: #9333ea;
-}
-
-.fa-php {
-  color: #777bb4;
-}
-
-.fa-git-alt {
-  color: #f05032;
-}
-
-.fa-discord {
-  color: #7289da;
-}
-
-.fa-code-branch {
-  color: #2ea44f;
-}
 
 /* Animations */
 .project-card,
@@ -284,6 +253,12 @@ footer {
 .skill-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  margin-right: auto; /* Pousse les icônes à droite */
+  display: flex; /* Utilise flexbox pour les icônes */
+  gap: 10px; /* Espace entre les icônes */
 }
 
 /* Navigation */
@@ -371,8 +346,3 @@ body {
   }
 }
 
-#icon {
-  margin-right: auto; /* Pousse les icônes à droite */
-  display: flex; /* Utilise flexbox pour les icônes */
-  gap: 10px; /* Espace entre les icônes */
-}
