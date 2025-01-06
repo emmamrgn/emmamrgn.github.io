@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
     <!-- Fond bleu clair -->
-    <circle cx="100" cy="100" r="95" fill="#9ce1f8"/>
+    <!-- <circle cx="100" cy="100" r="95" fill="#9ce1f8"/> -->
     
     <!-- Bordure du logo -->
     <circle cx="100" cy="100" r="85" fill="#3391f5" stroke="white" stroke-width="5"/>
