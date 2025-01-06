@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- Fond bleu clair -->
+    <circle cx="100" cy="100" r="95" fill="#9ce1f8"/>
+    
+    <!-- Bordure du logo -->
+    <circle cx="100" cy="100" r="85" fill="#3391f5" stroke="white" stroke-width="5"/>
+    
+    <!-- Étoiles décoratives blanches -->
+    <path d="M40 60 L42 65 L47 67 L42 69 L40 74 L38 69 L33 67 L38 65 Z" fill="white"/>
+    <path d="M150 130 L152 135 L157 137 L152 139 L150 144 L148 139 L143 137 L148 135 Z" fill="white"/>
+    <path d="M160 40 L162 45 L167 47 L162 49 L160 54 L158 49 L153 47 L158 45 Z" fill="white"/>
+    <path d="M50 150 L52 155 L57 157 L52 159 L50 164 L48 159 L43 157 L48 155 Z" fill="white"/>
+    <path d="M100 30 L102 35 L107 37 L102 39 L100 44 L98 39 L93 37 L98 35 Z" fill="white"/>
+    
+    <!-- E (réajusté verticalement pour aligner le bas) -->
+    <path d="M45 65 
+             L90 65 
+             L90 85 
+             L65 85 
+             L65 95 
+             L85 95 
+             L85 115 
+             L65 115 
+             L65 125 
+             L90 125 
+             L90 140 
+             L45 140" 
+          fill="white"/>
+    
+    <!-- M (réajusté verticalement pour aligner le bas) -->
+    <path d="M115 70 
+             L130 90 
+             L145 70 
+             L160 70 
+             L160 135 
+             L145 135 
+             L145 100 
+             L130 120 
+             L115 100 
+             L115 135 
+             L100 135 
+             L100 70" 
+          fill="white"/>
+    
+    <!-- Petites étoiles supplémentaires (blanches) -->
+    <circle cx="70" cy="60" r="1.5" fill="white"/>
+    <circle cx="140" cy="150" r="1.5" fill="white"/>
+    <circle cx="90" cy="140" r="1.5" fill="white"/>
+    <circle cx="130" cy="50" r="1.5" fill="white"/>
+</svg>
