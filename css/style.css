@@ -219,7 +219,7 @@ h3 {
 
 /* Footer */
 footer {
-  background-color: #45494e;
+  background-color: #717171;
   color: white;
   padding: 2rem 0;
   text-align: center;
@@ -369,4 +369,8 @@ body {
   body {
     padding-top: 6rem;
   }
+}
+
+#icon {
+  padding: right;
 }
