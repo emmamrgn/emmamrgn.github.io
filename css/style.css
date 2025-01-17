@@ -421,6 +421,36 @@ footer {
   background-color: var(--primary-color);
 }
 
+.download-button {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+
+}
+
+.download-button a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.download-button a:hover {
+  color: red;
+  background-color: var(--secondary-color);
+}
+
+.download-button a.active {
+  color: white;
+  background-color: var(--primary-color);
+}
+
 /* Page Header */
 .page-header {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
