@@ -34,7 +34,7 @@ body {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: white;
   padding: 3rem 0; 
-  min-height: 100px; /* taille de la bande bleue */
+  min-height: 200px ; /* taille de la bande bleue */
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
@@ -49,16 +49,20 @@ body {
 
 .hero-text {
   flex: 1;
+  white-space: nowrap;
 }
 
 .hero-image {
   flex: 0 0 auto;
+  margin-left: 10%;
 }
 
 .profile-image {
-  width: 244px;
+  max-width: 40%;
+  /* width: 207 px; */
   /* Ajusté pour maintenir le ratio 388:508 */
-  height: 254px;
+  height: auto;
+  /* height: 257 px; */
   /* Ajusté pour maintenir le ratio 388:508 */
   border-radius: 20px;
   /* Changé pour un rectangle arrondi */
@@ -501,29 +505,4 @@ body {
 
 .submit-btn:hover {
   background-color: #1d4ed8;
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.5rem; /* Smaller heading size */
-  }
-
-  h3 {
-    font-size: 1.25rem; /* Smaller subheading size */
-  }
-
-  .hero {
-    padding: 2rem 0; /* Further reduce padding */
-    min-height: 300px; /* Further reduce min-height */
-  }
-
-  .nav-links {
-    flex-direction: column; /* Stack navigation links */
-    gap: 1rem; /* Space between links */
-  }
-
-  .profile-image {
-    width: 150px; /* Adjust image size for mobile */
-    height: auto; /* Maintain aspect ratio */
-  }
 }
