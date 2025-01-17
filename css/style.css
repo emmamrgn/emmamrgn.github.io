@@ -338,12 +338,12 @@ footer {
 
 /* Animations */
 .project-card,
-.card,
+.school-item,
 .skill-item {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card:hover,
+.school-item:hover,
 .project-card:hover,
 .skill-item:hover {
   transform: translateY(-2px);
