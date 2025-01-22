@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Adresse email invalide.");
     }
 
-    $to = "morgenstern.emma@outlook.fr"; // Remplacez par votre adresse e-mail
+    $to = "morgenstern.emma@outlook.fr";
     $subject = "Nouveau message de $name - $subject";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
