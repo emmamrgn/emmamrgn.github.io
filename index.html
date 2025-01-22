@@ -96,7 +96,7 @@
                 <!-- Anti-spam honeypot field -->
                 <input type="text" name="_gotcha" style="display:none">
 
-                <button type="submit" class="submit-btn" action=# >Envoyer</button>
+                <button type="submit" class="submit-btn" action='index.html' >Envoyer</button>
             </form>
         </div>
     </section>
@@ -128,11 +128,16 @@
             // Affiche un message de confirmation
             alert('Votre message a été envoyé avec succès !');
     
-            // Redirige vers la page index.html
-            window.location.href = 'index.html';
+            // Soumet le formulaire manuellement
+            event.target.submit();
+    
+            // Redirige vers la page index.html après un court délai
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1000); // Délai de 1 seconde pour permettre l'envoi du formulaire
         });
     </script>
-    
+
 </body>
 
 </html>
