@@ -37,7 +37,7 @@
                     Passionnée par la programmation.</p>
             </div>
             <div class="hero-image">
-                <img src="img/image.jpg" class="profile-image">
+                <img src="img/cv.jpg" class="profile-image">
             </div>
         </div>
     </header>
@@ -120,6 +120,19 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+    
+            // Affiche un message de confirmation
+            alert('Votre message a été envoyé avec succès !');
+    
+            // Redirige vers la page index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+    
 </body>
 
 </html>
