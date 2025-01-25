@@ -453,6 +453,39 @@ footer {
   background-color: var(--primary-color);
 }
 
+/* Existing styles */
+
+/* Add mobile-specific styles */
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    margin-bottom: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .download-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+
 /* Page Header */
 .page-header {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
