@@ -388,6 +388,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .nav-logo {
@@ -449,8 +450,11 @@ body {
   }
 
   .nav-links {
-    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
     gap: 1rem;
+    width: 100%; /* Full width */
+    margin-top: 1rem;
   }
 
   body {
