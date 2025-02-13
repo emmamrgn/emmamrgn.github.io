@@ -388,7 +388,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .nav-logo {
@@ -423,6 +422,16 @@ footer {
   background-color: var(--primary-color);
 }
 
+#download-button{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#download-button:hover {
+  color: black  ;
+  background-color: rgb(120,120,255);
+}
+
 /* Page Header */
 .page-header {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
@@ -450,11 +459,8 @@ body {
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    gap: 1rem;
-    width: 100%; /* Full width */
     margin-top: 1rem;
+    gap: 1rem;
   }
 
   body {

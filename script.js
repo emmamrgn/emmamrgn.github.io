@@ -8,3 +8,10 @@ skills.forEach(skill => {
         }, 1000); // Adjust the duration to match your animation
     });
 })
+
+
+
+document.querySelector('#download-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.open('cv/EmmaMorgenstern_CV.pdf', '_blank');
+});
