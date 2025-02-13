@@ -428,7 +428,7 @@ footer {
 
 #download-button:hover {
   color: black  ;
-  background-color: rgb(120,120,255);
+  background-color: var(--secondary-color);
 }
 
 /* Page Header */
