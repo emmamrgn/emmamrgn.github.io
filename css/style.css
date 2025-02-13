@@ -507,7 +507,6 @@ body {
 /* Media Queries pour la navigation */
 @media (max-width: 768px) {
   .nav-content {
-    flex-direction: column;
     padding: 1rem;
   }
 
