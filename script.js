@@ -13,5 +13,9 @@ skills.forEach(skill => {
 
 document.querySelector('#download-button').addEventListener('click', function(event) {
     event.preventDefault();
-    window.open('cv/EmmaMorgenstern_CV.pdf', '_blank');
+    
+    // Afficher un popup de confirmation
+    if (confirm('Voulez-vous télécharger le CV d\'Emma Morgenstern ?')) {
+        window.open('cv/CV_EmmaMorgenstern.pdf', '_blank');
+    }
 });
