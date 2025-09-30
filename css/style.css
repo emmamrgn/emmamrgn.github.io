@@ -354,6 +354,10 @@ footer {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.exp-item ul {
+  margin-left: 1.5rem;
+}
+
 
 
 
