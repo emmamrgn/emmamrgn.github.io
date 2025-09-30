@@ -333,6 +333,27 @@ footer {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.exp-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 1rem;
+}
+
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.exp-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 
 
 
