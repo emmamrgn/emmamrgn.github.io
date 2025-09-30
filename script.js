@@ -214,12 +214,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                 border-radius: 8px;
                                 cursor: pointer;
                                 font-weight: 500;
+                                font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Plus Jakarta Sans', sans-serif;
                                 transition: all 0.2s ease;
                                 display: flex;
                                 align-items: center;
                                 gap: 0.5rem;
                             " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(74,144,226,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                📥 Télécharger le PDF
+                                📥 Télécharger le CV en PDF
                             </button>
                             <button id="open-new-tab" style="
                                 background: #f8f9fa;
@@ -229,12 +230,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                 border-radius: 8px;
                                 cursor: pointer;
                                 font-weight: 500;
+                                font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Plus Jakarta Sans', sans-serif;
                                 transition: all 0.2s ease;
                                 display: flex;
                                 align-items: center;
                                 gap: 0.5rem;
                             " onmouseover="this.style.borderColor='#4a90e2'; this.style.color='#4a90e2'; this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#dee2e6'; this.style.color='#495057'; this.style.transform='translateY(0)'">
-                                🔗 Ouvrir dans un nouvel onglet
+                                🔗 Ouvrir le CV dans un nouvel onglet
                             </button>
                         </div>
                     </div>
