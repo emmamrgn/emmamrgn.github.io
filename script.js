@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <!-- Contenu PDF -->
                         <div style="flex: 1; position: relative; background: #f5f5f5;">
                             <iframe 
-                                src="cv/CV_EmmaMorgenstern.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH" 
+                                src="cv/EmmamorgensternCV.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH" 
                                 style="
                                     width: 100%;
                                     height: 100%;
@@ -275,13 +275,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             modal.querySelector('#download-pdf').onclick = function() {
                 const link = document.createElement('a');
-                link.href = 'cv/CV_EmmaMorgenstern.pdf';
-                link.download = 'CV_Emma_Morgenstern.pdf';
+                link.href = 'cv/EmmaMorgensternCV.pdf';
+                link.download = 'EmmaMorgensternCV.pdf';
                 link.click();
             };
             
             modal.querySelector('#open-new-tab').onclick = function() {
-                window.open('cv/CV_EmmaMorgenstern.pdf', '_blank');
+                window.open('cv/EmmaMorgensternCV.pdf', '_blank');
             };
             
             // Fermer en cliquant à l'extérieur
