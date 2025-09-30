@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 500);
     }
 
-    // 6. Popup de confirmation pour le CV
+    // 6. Popup avec lecteur PDF intégré pour le CV
     const downloadButton = document.querySelector('#download-button');
     if (downloadButton) {
         downloadButton.addEventListener('click', function(event) {
             event.preventDefault();
             
-            // Créer un popup personnalisé plus joli
+            // Créer un popup avec lecteur PDF intégré
             const modal = document.createElement('div');
             modal.innerHTML = `
                 <div style="
@@ -110,27 +110,103 @@ document.addEventListener('DOMContentLoaded', function() {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.5);
+                    background: rgba(0, 0, 0, 0.8);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     z-index: 10000;
                     animation: fadeIn 0.3s ease;
+                    padding: 20px;
+                    box-sizing: border-box;
                 ">
                     <div style="
                         background: white;
-                        padding: 2rem;
                         border-radius: 15px;
-                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-                        text-align: center;
-                        max-width: 400px;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                        width: 90%;
+                        max-width: 900px;
+                        height: 90%;
+                        max-height: 800px;
+                        display: flex;
+                        flex-direction: column;
                         transform: scale(0.9);
                         animation: popIn 0.3s ease forwards;
+                        overflow: hidden;
                     ">
-                        <h3 style="margin-bottom: 1rem; color: #4a90e2;">📄 Télécharger le CV</h3>
-                        <p style="margin-bottom: 1.5rem; color: #666;">Voulez-vous télécharger le CV d'Emma Morgenstern ?</p>
-                        <div style="display: flex; gap: 1rem; justify-content: center;">
-                            <button id="confirm-download" style="
+                        <!-- Header du popup -->
+                        <div style="
+                            padding: 1.5rem;
+                            border-bottom: 1px solid #eee;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            background: linear-gradient(45deg, #4a90e2, #7cf0d7);
+                            color: white;
+                        ">
+                            <div>
+                                <h3 style="margin: 0; font-size: 1.2rem;">📄 CV - Emma Morgenstern</h3>
+                                <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.9rem;">Visualisation et téléchargement</p>
+                            </div>
+                            <button id="close-modal" style="
+                                background: rgba(255, 255, 255, 0.2);
+                                border: none;
+                                color: white;
+                                font-size: 1.5rem;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: background 0.2s ease;
+                            " onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">×</button>
+                        </div>
+                        
+                        <!-- Contenu PDF -->
+                        <div style="flex: 1; position: relative; background: #f5f5f5;">
+                            <iframe 
+                                src="cv/CV_EmmaMorgenstern.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH" 
+                                style="
+                                    width: 100%;
+                                    height: 100%;
+                                    border: none;
+                                    background: white;
+                                "
+                                title="CV Emma Morgenstern"
+                            ></iframe>
+                            <div id="pdf-loading" style="
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                text-align: center;
+                                color: #666;
+                                font-size: 1.1rem;
+                            ">
+                                <div style="
+                                    width: 40px;
+                                    height: 40px;
+                                    border: 4px solid #f3f3f3;
+                                    border-top: 4px solid #4a90e2;
+                                    border-radius: 50%;
+                                    animation: spin 1s linear infinite;
+                                    margin: 0 auto 1rem auto;
+                                "></div>
+                                Chargement du CV...
+                            </div>
+                        </div>
+                        
+                        <!-- Footer avec boutons -->
+                        <div style="
+                            padding: 1rem 1.5rem;
+                            border-top: 1px solid #eee;
+                            display: flex;
+                            gap: 1rem;
+                            justify-content: center;
+                            background: #fafafa;
+                        ">
+                            <button id="download-pdf" style="
                                 background: linear-gradient(45deg, #4a90e2, #7cf0d7);
                                 color: white;
                                 border: none;
@@ -138,18 +214,28 @@ document.addEventListener('DOMContentLoaded', function() {
                                 border-radius: 8px;
                                 cursor: pointer;
                                 font-weight: 500;
-                                transition: transform 0.2s ease;
-                            ">Oui, télécharger</button>
-                            <button id="cancel-download" style="
-                                background: #f0f0f0;
-                                color: #666;
-                                border: none;
+                                transition: all 0.2s ease;
+                                display: flex;
+                                align-items: center;
+                                gap: 0.5rem;
+                            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(74,144,226,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                📥 Télécharger le PDF
+                            </button>
+                            <button id="open-new-tab" style="
+                                background: #f8f9fa;
+                                color: #495057;
+                                border: 2px solid #dee2e6;
                                 padding: 0.75rem 1.5rem;
                                 border-radius: 8px;
                                 cursor: pointer;
                                 font-weight: 500;
-                                transition: transform 0.2s ease;
-                            ">Annuler</button>
+                                transition: all 0.2s ease;
+                                display: flex;
+                                align-items: center;
+                                gap: 0.5rem;
+                            " onmouseover="this.style.borderColor='#4a90e2'; this.style.color='#4a90e2'; this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#dee2e6'; this.style.color='#495057'; this.style.transform='translateY(0)'">
+                                🔗 Ouvrir dans un nouvel onglet
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -167,20 +253,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 @keyframes popIn {
                     to { transform: scale(1); }
                 }
-                button:hover {
-                    transform: translateY(-2px) !important;
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
                 }
             `;
             document.head.appendChild(style);
             
+            // Cacher l'indicateur de chargement après un délai
+            setTimeout(() => {
+                const loadingIndicator = modal.querySelector('#pdf-loading');
+                if (loadingIndicator) {
+                    loadingIndicator.style.display = 'none';
+                }
+            }, 2000);
+            
             // Gestion des clics
-            modal.querySelector('#confirm-download').onclick = function() {
-                window.open('cv/CV_EmmaMorgenstern.pdf', '_blank');
+            modal.querySelector('#close-modal').onclick = function() {
                 document.body.removeChild(modal);
             };
             
-            modal.querySelector('#cancel-download').onclick = function() {
-                document.body.removeChild(modal);
+            modal.querySelector('#download-pdf').onclick = function() {
+                const link = document.createElement('a');
+                link.href = 'cv/CV_EmmaMorgenstern.pdf';
+                link.download = 'CV_Emma_Morgenstern.pdf';
+                link.click();
+            };
+            
+            modal.querySelector('#open-new-tab').onclick = function() {
+                window.open('cv/CV_EmmaMorgenstern.pdf', '_blank');
             };
             
             // Fermer en cliquant à l'extérieur
@@ -189,6 +290,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.removeChild(modal);
                 }
             };
+            
+            // Fermer avec la touche Échap
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && document.body.contains(modal)) {
+                    document.body.removeChild(modal);
+                }
+            });
         });
     }
 
